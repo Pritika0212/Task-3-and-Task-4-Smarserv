@@ -1,0 +1,3 @@
+ Enter any email : valid email is as follows - sample@gmail.com
+
+password is Smartserv@123 as per company's instruction.

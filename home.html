@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body style="background-color:white;">
+
+<h1>Company Metrics</h1>
+
+
+
+<div class="grid-container">
+  <div class="grid-item"><h style="color:  green;"> $406,411.29</h><br>Total Revenue</div>
+  <div class="grid-item"><h style="color:  green;"> $620</h><br>Total Jobs</div>
+  <div class="grid-item"><h style="color: black;"> 655</h><br>Tickets created</div>  
+  <div class="grid-item"><h style="color: red;"> $110,448.8</h><br>Outsanding Amount</div>
+  <div class="grid-item"><h style="color: black;"> 105</h><br>Membership Sold</div>
+  <div class="grid-item"><h style="color:  black;">436</h><br>Jobs Completed</div>  
+ 
+  
+</div>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [50000, 100000, 1100000, 100000, 150000];
+var barColors = ["green", "green","green","green","green"];
+
+new Chart("myChart", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+},
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Revenue By Job Location"
+    },
+    scales: {
+      xAxes: [{ticks: {min: 10000, max:150000}}]
+    }
+  }
+});
+</script>
+
+</body>
+
+</html>

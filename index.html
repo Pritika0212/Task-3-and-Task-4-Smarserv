@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smartserv_Login</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<img src="https://media.glassdoor.com/l/4a/b5/71/a7/smartserv.jpg" height=250 alt="smartserv">
+		<form class="login_form" action="home.html" method="post" name="form" onsubmit="return validated()">
+			<div class="font"></div>
+			<input autocomplete="off" type="text" placeholder="Username" name="email">
+			<div id="email_error">Please fill up a valid email adress</div>
+			<div class="font font2"></div>
+			<input type="password" placeholder="Password" name="password">
+			<div id="pass_error">Please fill up your Password with one capital letter,one numeric and only with @ as special character</div>
+			<button type="submit">Login</button>
+			<button onclick="myfunction()" style=background-color:red type="forgot">FORGOT PASSWORD</button>
+			<script>
+				function myfunction () {
+                alert("send an email to supportsmartserv.io")					
+				}
+			</script>
+		</form>
+	</div>	
+	<script src="valid.js"></script>
+</body>
+</html>
